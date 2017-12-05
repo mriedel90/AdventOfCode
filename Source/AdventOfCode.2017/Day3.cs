@@ -144,5 +144,45 @@ namespace AdventOfCode._2017
             return -1;
         }
 
+        public static double calcDistspiral(int input)
+        {
+            var points = spiral(input);
+            return Math.Abs(points.x) + Math.Abs(points.y);
+        }
+
+        public static (int x, int y) spiral(int n)
+        {
+            var k = Convert.ToInt32(Math.Ceiling((Math.Sqrt(n) - 1) / 2));
+            var t = 2 * k + 1;
+            var m = Convert.ToInt32(Math.Pow(t, 2));
+            t = t - 1;
+
+            if (n >= m - t)
+                return (k - (m - n), -1 * k);
+            m = m - t;
+            if (n >= m - t)
+                return (-1 * k, -1 * k + (m - n));
+            m = m - t;
+            if (n >= m - t)
+                return (-1 * k + (m - n), k);
+            return (k, k - (m - n - t));
+
+
+
+            //if (n > m - t)
+            //    return (k - (m - n), -1 * k);
+            //else
+            //{
+            //    if (n > m - t)
+            //        return (-1 * k, -1 * k + (m - n));
+            //    else
+            //    {
+            //        if (n > m-t)
+            //            return ((-1 * k) + (m - n), k);
+            //        else
+            //            return (k, k - (m - n - t));
+            //    }
+            //}
+        }
     }
 }
