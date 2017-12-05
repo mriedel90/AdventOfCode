@@ -25,6 +25,14 @@ namespace AdventOfCode._2017.Tests
             Assert.AreEqual(expectedResult, result);
         }
 
+        
+        public void Day3_Part1()
+        {
+            var input = 12;
+            var result = Day3.CalculateManhattanDistance(input);
+           
+        }
+
         [Test]
         [TestCase("1212", 6)]
         [TestCase("1221", 0)]
