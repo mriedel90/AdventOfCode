@@ -6,8 +6,8 @@ namespace AdventOfCode._2016.Tests
     public class Day5Tests
     {
         [Test]
-        [TestCase("abc", "18f47a30")]
-        [TestCase("reyedfim", "f97c354d")]
+        //[TestCase("abc", "18f47a30")]
+        //[TestCase("reyedfim", "f97c354d")]
         public void Day5_Part1(string input, string expectedResult)
         {
             // Arrange
@@ -21,8 +21,8 @@ namespace AdventOfCode._2016.Tests
         }
 
         [Test]
-        [TestCase("abc", "05ace8e3")]
-        [TestCase("reyedfim", "863dde27")]
+        //[TestCase("abc", "05ace8e3")]
+        //[TestCase("reyedfim", "863dde27")]
         public void Day5_Part2(string input, string expectedResult)
         {
             // Arrange
