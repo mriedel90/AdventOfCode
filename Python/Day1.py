@@ -1,3 +1,4 @@
+from helperMethods import readFileAsInts
 
 def calculateFrequency(frequecyChanges):
     frequency = 0
@@ -39,11 +40,7 @@ print('first frequency twice is: ' + str(firstFrequencyTwice) + ' should be 14')
 
 
 # read from file
-frequencyChanges = []
-inputFile = open("Day1.txt", "r")
-for line in inputFile.readlines():
-    frequencyChanges.append(int(line))
-inputFile.close()
+frequencyChanges = readFileAsInts("Day1.txt")
 
 freq = calculateFrequency(frequencyChanges)
 print('frequency is: ' + str(freq))
