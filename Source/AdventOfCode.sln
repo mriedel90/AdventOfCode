@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.2017.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.ConsoleApp", "AdventOfCode.ConsoleApp\AdventOfCode.ConsoleApp.csproj", "{0526C03C-DA8E-48FC-8332-EC4442C295A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.2018", "AdventOfCode.2018\AdventOfCode.2018.csproj", "{4A2BA663-B902-488B-8A70-9EB43D357D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.2018.Tests", "AdventOfCode.2018.Tests\AdventOfCode.2018.Tests.csproj", "{4DECDE08-2F15-4529-ABB9-EF33709767B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{0526C03C-DA8E-48FC-8332-EC4442C295A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0526C03C-DA8E-48FC-8332-EC4442C295A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0526C03C-DA8E-48FC-8332-EC4442C295A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2BA663-B902-488B-8A70-9EB43D357D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2BA663-B902-488B-8A70-9EB43D357D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2BA663-B902-488B-8A70-9EB43D357D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2BA663-B902-488B-8A70-9EB43D357D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DECDE08-2F15-4529-ABB9-EF33709767B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DECDE08-2F15-4529-ABB9-EF33709767B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DECDE08-2F15-4529-ABB9-EF33709767B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DECDE08-2F15-4529-ABB9-EF33709767B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{68439EAC-9F3F-4F8C-BD3D-B885B0F0E95A} = {80AF5478-F2AC-46DC-B08E-9A90E8B9167B}
 		{5A30D6D5-D4D6-4704-A824-D0BF8C3CFF93} = {80AF5478-F2AC-46DC-B08E-9A90E8B9167B}
+		{4DECDE08-2F15-4529-ABB9-EF33709767B8} = {80AF5478-F2AC-46DC-B08E-9A90E8B9167B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {024CCB53-519D-4CC1-A27F-8951EAB0A366}
