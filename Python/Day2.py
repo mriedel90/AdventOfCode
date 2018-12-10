@@ -15,11 +15,45 @@ def getChecksum(inputs):
             countOf3 += 1
     return countOf2 * countOf3
 
+def differsByOne(val1, val2):
+    differsBy = 0
+    index = 0
+    for c in val1:
+        if index < len(val2) and c != val2[index]:
+            differsBy += 1
+        index += 1
+    return differsBy == 1
+
+def getCommonLetters(val1, val2):
+    commonLetters = ''
+    index = 0
+    for c in val1:
+        if index < len(val2) and c == val2[index]:
+            commonLetters += c
+        index += 1
+    return commonLetters
+
+
+def getCommonLettersOfDifferingByOne(inputs):
+    for val1 in inputs:
+        for val2 in inputs:
+            if differsByOne(val1, val2):
+                return getCommonLetters(val1, val2)
+    return ''
+
 
 inputs = ['abcdef', 'bababc', 'abbcde', 'abcccd', 'aabcdd', 'abcdee', 'ababab']
 checkSum = getChecksum(inputs)
 print('checksum is: ' + str(checkSum) + ' should be 12')
 
+inputs = ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz']
+commonLets = getCommonLettersOfDifferingByOne(inputs)
+print('common letters are: ' + commonLets + ' should be fgij')
+
+
 inputs = readFile("Day2.txt")
 checkSum = getChecksum(inputs)
 print('checksum is: ' + str(checkSum))
+
+commonLets = getCommonLettersOfDifferingByOne(inputs)
+print('common letters are: ' + commonLets)
