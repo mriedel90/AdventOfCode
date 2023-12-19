@@ -4,8 +4,7 @@ from helpers import *
 
 
 
-def ProcessMappings(lines):
-    seeds, categories = ParseInput(lines)
+def ProcessMappings(seeds, categories):
 
     # loop through categories
     # loop through seeds
@@ -27,9 +26,31 @@ def GetMappedValue(mappings, sourceValue):
             return sourceValue + offset
     return sourceValue
 
-def ParseInput(lines):
+def ParseSeedsV1(lines):
+    return [Seed(x) for x in lines[0][len('seeds: '):].split()]
 
-    seeds = [Seed(x) for x in lines[0][len('seeds: '):].split()]
+
+def ParseSeedsV2(lines):
+    seeds = []
+    seedParts = [int(x) for x in lines[0][len('seeds: '):].split()]
+
+    seedStart = -1
+    for seedPart in seedParts:
+        if seedStart == -1:
+            seedStart = seedPart
+        else:
+            numSeeds = seedPart
+            seeds += [Seed(seedStart + i) for i in range(numSeeds)]
+            seedStart = -1
+
+    #  iterate through odd numbers until the end of the range 
+    # for i in range(len(seedParts))[::2]:
+    #     seedStart = seedParts[i]
+    #     numSeeds = seedParts[i+1]
+    #     seeds += [Seed(seedStart + i) for i in range(numSeeds)]
+    return seeds
+
+def ParseCategories(lines):
     currentCategory = None
     categories = []
     for line in lines[1:]:
@@ -46,7 +67,7 @@ def ParseInput(lines):
     if (currentCategory):
         categories.append(currentCategory)
 
-    return (seeds, categories)
+    return categories
 
 def ParseCategoryMapping(line):
     parts = line.split()
@@ -79,15 +100,22 @@ def Seed(seed):
 # x = dest - source
 def Part1(file):
     lines = readFileAsLines(file)
-    
-    seedMappings = ProcessMappings(lines)
+
+    seeds = ParseSeedsV1(lines)
+    categories = ParseCategories(lines)
+    seedMappings = ProcessMappings(seeds, categories)
     lowestLocation = min(seedMappings, key=lambda x: x['location'])['location']
     return lowestLocation
 
 
 def Part2(file):
     lines = readFileAsLines(file)
-    return 0
+
+    seeds = ParseSeedsV2(lines)
+    categories = ParseCategories(lines)
+    seedMappings = ProcessMappings(seeds, categories)
+    lowestLocation = min(seedMappings, key=lambda x: x['location'])['location']
+    return lowestLocation
 
 
 
@@ -95,24 +123,24 @@ def Part2(file):
 ####################
 
 
-day = os.path.splitext(os.path.basename(__file__))[0]
-print(day)
+day = get_day(__file__)
 
-# Part 1 Sample Answer: 
+# Part 1 Sample Answer: 35
 part1SampleResult = Part1(day + '/sample.txt')
-print('Part 1 Sample: ' + str(part1SampleResult))
+log('Part 1 Sample: ' + str(part1SampleResult))
 part1Result = Part1(day + '/input.txt')
-print('Part 1: ' + str(part1Result))
+log('Part 1: ' + str(part1Result))
 
 
-# # Part 1 Sample Answer: 
-# part2SampleResult = Part2(day + '/sample.txt')
-# print('Part 2 Sample: ' + str(part2SampleResult))
-# part2Result = Part2(day + '/input.txt')
-# print('Part 2: ' + str(part2Result))
+# # Part 1 Sample Answer: 46
+part2SampleResult = Part2(day + '/sample.txt')
+log('Part 2 Sample: ' + str(part2SampleResult))
+part2Result = Part2(day + '/input.txt')
+log('Part 2: ' + str(part2Result))
 
 # Output:
 
-# day5
-# Part 1 Sample: 35
-# Part 1: 600279879
+# 2023-12-19 00:52:44: day5
+# 2023-12-19 00:52:51: Part 1 Sample: 35
+# 2023-12-19 00:52:51: Part 1: 600279879
+# 2023-12-19 00:52:57: Part 2 Sample: 46

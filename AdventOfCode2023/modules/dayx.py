@@ -14,22 +14,22 @@ def Part2(file):
 
 
 
+
 ####################
 
-day = 'dayx'
-print(day)
+day = get_day(__file__)
 
 # Part 1 Sample Answer: 
 part1SampleResult = Part1(day + '/sample.txt')
-print('Part 1 Sample: ' + str(part1SampleResult))
+log('Part 1 Sample: ' + str(part1SampleResult))
 part1Result = Part1(day + '/input.txt')
-print('Part 1: ' + str(part1Result))
+log('Part 1: ' + str(part1Result))
 
 
-# Part 1 Sample Answer: 
+# # Part 1 Sample Answer: 
 part2SampleResult = Part2(day + '/sample.txt')
-print('Part 2 Sample: ' + str(part2SampleResult))
+log('Part 2 Sample: ' + str(part2SampleResult))
 part2Result = Part2(day + '/input.txt')
-print('Part 2: ' + str(part2Result))
+log('Part 2: ' + str(part2Result))
 
 # Output:
