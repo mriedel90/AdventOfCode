@@ -1,7 +1,5 @@
 from helpers import *
 
-
-
 def parseGame(input):
     parts = input[len('Game '):].split(':')
     id = int(parts[0])
@@ -53,10 +51,10 @@ def gamePower(game):
 # part 1 result: 
 # sample: 8
 # input: 2348
-def SumValidGameIds():
+def SumValidGameIds(file):
     sum = 0
 
-    lines = readFileAsLines('inputs/day2.txt')
+    lines = readFileAsLines(file)
     for line in lines:
         game = parseGame(line)
         sum += gameScore(game)
@@ -66,18 +64,33 @@ def SumValidGameIds():
 # part 2 results:
 # sample: 2286
 # input: 76008
-def SumPowers():
+def SumPowers(file):
     sum = 0
 
-    lines = readFileAsLines('inputs/day2.txt')
+    lines = readFileAsLines(file)
     for line in lines:
         game = parseGame(line)
         sum += gamePower(game)
     return sum
 
 
-sum = SumPowers()
-
-print('Sum: ' + str(sum))
 
 
+# Part 1 Sample Answer: 8
+part1SampleResult = SumValidGameIds('day2/sample.txt')
+print('Part 1 Sample: ' + str(part1SampleResult))
+part1Result = SumValidGameIds('day2/input.txt')
+print('Part 1: ' + str(part1Result))
+
+
+# Part 1 Sample Answer: 2286
+part2SampleResult = SumPowers('day2/sample.txt')
+print('Part 2 Sample: ' + str(part2SampleResult))
+part2Result = SumPowers('day2/input.txt')
+print('Part 2: ' + str(part2Result))
+
+# Output:
+# Part 1 Sample: 8
+# Part 1: 2348
+# Part 2 Sample: 2286
+# Part 2: 76008

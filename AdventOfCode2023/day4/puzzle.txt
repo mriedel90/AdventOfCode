@@ -34,8 +34,6 @@ Take a seat in the large pile of colorful cards. How many points are they worth 
 
 Your puzzle answer was 23235.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 Just as you're about to report your findings to the Elf, one of you realizes that the rules have actually been printed on the back of every card this whole time.
 
@@ -64,9 +62,12 @@ Once all of the originals and copies have been processed, you end up with 1 inst
 
 Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?
 
-Answer: 
- 
+Your puzzle answer was 5920640.
 
-Although it hasn't changed, you can still get your puzzle input.
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.

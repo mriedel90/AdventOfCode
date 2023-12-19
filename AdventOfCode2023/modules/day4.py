@@ -1,3 +1,4 @@
+import os
 from helpers import *
 
 
@@ -60,26 +61,25 @@ def CalcNumberOfTotalCards(file):
 
 
 
+day = os.path.splitext(os.path.basename(__file__))[0]
+print(day)
+
+# Part 1 Sample Answer: 4361
+part1SampleResult = SumPoints(day + '/sample.txt')
+print('Part 1 Sample: ' + str(part1SampleResult))
+part1Result = SumPoints(day + '/input.txt')
+print('Part 1: ' + str(part1Result))
 
 
-file = 'inputs/day4-sample.txt'
-sumPoints = SumPoints(file)
-numCards = CalcNumberOfTotalCards(file)
+# Part 1 Sample Answer: 467835
+part2SampleResult = CalcNumberOfTotalCards(day + '/sample.txt')
+print('Part 2 Sample: ' + str(part2SampleResult))
+part2Result = CalcNumberOfTotalCards(day + '/input.txt')
+print('Part 2: ' + str(part2Result))
 
-print('Sum of Points: ' + str(sumPoints))
-print('Num Cards: ' + str(numCards))
-
-
-
-# part 1
-# sample: Sum of Points: 13
-# input: Sum of Points: 23235
-
-#part 2 - sample:
-# Sum of Points: 13
-# Num Cards: 30
-
-#part 2 - input:
-
-# Sum of Points: 23235
-# Num Cards: 5920640
+# Output:
+# day4
+# Part 1 Sample: 13
+# Part 1: 23235
+# Part 2 Sample: 30
+# Part 2: 5920640

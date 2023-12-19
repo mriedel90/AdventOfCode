@@ -110,24 +110,21 @@ def SumGearRatios(file):
     return sum(gear['part1'] * gear['part2'] for gear in gears)
 
 
-file = 'inputs/day3.txt'
-sumParts = SumParts(file)
-sumGearRatios = SumGearRatios(file)
-
-print('Sum of Parts: ' + str(sumParts))
-print('Sum of Gear Ratios: ' + str(sumGearRatios))
-
-
-# sample:
-# Sum of Parts: 4361
-# Sum of Gear Ratios: 467835
-
-# attempt 1 - too low - issue is part start col was 1 col too early
-#input:
-# Sum of Parts: 556367
-# Sum of Gear Ratios: 83695501
+# Part 1 Sample Answer: 4361
+part1SampleResult = SumParts('day3/sample.txt')
+print('Part 1 Sample: ' + str(part1SampleResult))
+part1Result = SumParts('day3/input.txt')
+print('Part 1: ' + str(part1Result))
 
 
-# attempt 2 
-# Sum of Parts: 556367
-# Sum of Gear Ratios: 89471771
+# Part 1 Sample Answer: 467835
+part2SampleResult = SumGearRatios('day3/sample.txt')
+print('Part 2 Sample: ' + str(part2SampleResult))
+part2Result = SumGearRatios('day3/input.txt')
+print('Part 2: ' + str(part2Result))
+
+# Output:
+# Part 1 Sample: 4361
+# Part 1: 556367
+# Part 2 Sample: 467835
+# Part 2: 89471771

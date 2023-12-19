@@ -3,9 +3,9 @@ import sys
 
 # result: 55093
 # result: 54249
-def SumCalibrationValuesV2():
+def SumCalibrationValuesV2(file):
     sum = 0
-    lines = getLines('inputs/day1.txt')
+    lines = getLines(file)
     for line in lines:
         cv = CalibrationValueV2(line)
         sum += cv
@@ -15,9 +15,9 @@ def SumCalibrationValuesV2():
 
 # result: 55002
 # result: 53194
-def SumCalibrationValues():
+def SumCalibrationValues(file):
     sum = 0
-    lines = getLines('inputs/day1.txt')
+    lines = getLines(file)
     for line in lines:
         cv = CalibrationValue(line)
         sum += cv
@@ -144,4 +144,22 @@ class Day1:
         print(sys.getsizeof(my_list[::-1]))      # 8000056 = More memory usage
 
 
-        
+
+# Part 1 Sample Answer: 142
+part1SampleResult = SumCalibrationValues('day1/sample.txt')
+print('Part 1 Sample: ' + str(part1SampleResult))
+part1Result = SumCalibrationValues('day1/input.txt')
+print('Part 1: ' + str(part1Result))
+
+
+# Part 1 Sample Answer: 281
+part2SampleResult = SumCalibrationValuesV2('day1/sample2.txt')
+print('Part 2 Sample: ' + str(part2SampleResult))
+part2Result = SumCalibrationValuesV2('day1/input.txt')
+print('Part 2: ' + str(part2Result))
+
+# Output:
+# Part 1 Sample: 142
+# Part 1: 53194
+# Part 2 Sample: 281
+# Part 2: 54249
