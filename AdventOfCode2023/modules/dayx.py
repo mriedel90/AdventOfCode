@@ -26,7 +26,7 @@ part1Result = Part1(day + '/input.txt')
 log('Part 1: ' + str(part1Result))
 
 
-# # Part 1 Sample Answer: 
+# Part 2 Sample Answer: 
 part2SampleResult = Part2(day + '/sample.txt')
 log('Part 2 Sample: ' + str(part2SampleResult))
 part2Result = Part2(day + '/input.txt')
