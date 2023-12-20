@@ -132,10 +132,14 @@ log('Part 2: ' + str(part2Result))
 # 2023-12-20 11:35:21: Part 1: 17263
 # 2023-12-20 11:35:21: Part 2 Sample: 6
 
-# stopped at 12:18 (43 mins) - ran to 330938532 steps
-#using LCM (least common multiple) the answer is 14631604759649
+# stopped at 12:18 (43 mins) - ran to 330,938,532 steps
+#using LCM (least common multiple) the answer is 14,631,604,759,649
 # brute force just wont work, need to do LCM
 
+#44212 times needed to finish
+# = 1768480 minuts needed
+# = 29474 hours
+# = 1228 days
 
 # part 2 - using LCM
 # 2023-12-20 12:39:42: day8
