@@ -55,7 +55,7 @@ def parse_poker_hand_jokers(hand):
         card_counts_with_jokers[card] += nJokers
 
     # Check for various poker hand types
-    if 5 in card_counts_with_jokers.values():
+    if 5 in card_counts_with_jokers.values() or 5 in card_counts.values():
         return 1 #"Five of a kind"
     elif 4 in card_counts_with_jokers.values():
         return 2 #"Four of a kind"
@@ -171,12 +171,30 @@ log('Part 2 Sample: ' + str(part2SampleResult))
 part2Result = Part2(day + '/input.txt')
 log('Part 2: ' + str(part2Result))
 
-# Output:
+# Output - Attempt 1
+# Attempt1: 249071353 is too low - method used ranking like hands with J as lowest value
 # 2023-12-19 23:19:39: day7
 # 2023-12-19 23:19:39: Part 1 Sample: 6440
 # 2023-12-19 23:19:39: Part 1: 250232501
 # 2023-12-19 23:19:41: Part 2 Sample: 5905
 # 2023-12-19 23:22:15: Part 2: 249071353
 
-# Wrong  :(
-# 249071353 is too low
+# Output - Attempt 2
+# Attempt2: 249228192 is too high - method used ranking like hands the same as they were
+# 2023-12-20 10:36:22: day7
+# 2023-12-20 10:36:24: Part 1 Sample: 6440
+# 2023-12-20 10:36:24: Part 1: 250232501
+# 2023-12-20 10:36:24: Part 2 Sample: 5905
+# 2023-12-20 10:36:24: Part 2: 249228192
+
+# Output - Attempt 3
+# Attempt3: there is a hand with a jokers JJJJJ, which my logic treated as just high card, but really it is a 5 of a kind, also revert back the like hand ranking logic
+# 2023-12-20 10:42:43: day7
+# 2023-12-20 10:42:43: Part 1 Sample: 6440
+# 2023-12-20 10:42:43: Part 1: 250232501
+# 2023-12-20 10:42:43: Part 2 Sample: 5905
+# 2023-12-20 10:42:43: Part 2: 249138943
+
+
+
+
