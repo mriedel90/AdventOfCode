@@ -188,7 +188,7 @@ log('Part 2: ' + str(part2Result))
 # 2023-12-20 10:36:24: Part 2: 249228192
 
 # Output - Attempt 3
-# Attempt3: there is a hand with a jokers JJJJJ, which my logic treated as just high card, but really it is a 5 of a kind, also revert back the like hand ranking logic
+# Attempt3: there is a hand with a jokers JJJJJ (last line in the part2debug.txt file), which my logic treated as just high card, but really it is a 5 of a kind, also revert back the like hand ranking logic
 # 2023-12-20 10:42:43: day7
 # 2023-12-20 10:42:43: Part 1 Sample: 6440
 # 2023-12-20 10:42:43: Part 1: 250232501
